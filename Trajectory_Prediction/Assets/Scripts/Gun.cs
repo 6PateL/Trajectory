@@ -9,8 +9,8 @@ public class Gun : MonoBehaviour
   [SerializeField] private GameObject _bulletPrefab;
   [SerializeField] private float power = 100;
 
-  //[SerializeField] private Trajectory_Render Trajectory;
-  [SerializeField] private Trajectory_Render_Advanced Trajectory; 
+  [SerializeField] private Trajectory_Render Trajectory;
+  //[SerializeField] private Trajectory_Render_Advanced Trajectory; 
 
   private Camera _camera;
 
@@ -34,7 +34,7 @@ public class Gun : MonoBehaviour
     {
       Rigidbody bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
       bullet.AddForce(speed, ForceMode.VelocityChange);
-      Trajectory.AddBody(bullet); 
+      //Trajectory.AddBody(bullet); 
     }
   }
 }
